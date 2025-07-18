@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Kejutan Ulang Tahun</title>
-  <link rel="stylesheet" href="style.css" />
+
   <style>
     body, html {
       margin: 0;
@@ -176,10 +176,12 @@
       e.preventDefault();
       const name = document.getElementById("name").value.trim();
       const birthdate = document.getElementById("birthdate").value;
+
       if (!name || !birthdate) {
         alert("Nama dan Tanggal Lahir wajib diisi!");
         return;
       }
+
       localStorage.setItem("userName", name);
       localStorage.setItem("userBirth", birthdate);
       window.location.href = "game.html";
