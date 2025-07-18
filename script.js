@@ -12,19 +12,18 @@ window.addEventListener("load", () => {
   checkOrientation();
 
   const video = document.getElementById("loading-video");
+  const startBtn = document.getElementById("start-btn");
   const loadingScreen = document.getElementById("loading-screen");
   const formSection = document.getElementById("form-section");
-  const unmuteBtn = document.getElementById("unmute-btn");
 
-  video.onended = () => {
-    loadingScreen.style.display = "none";
-    formSection.style.display = "flex";
-  };
-
-  unmuteBtn.addEventListener("click", () => {
-    video.muted = false;
-    video.currentTime = 0;
+  startBtn.addEventListener("click", () => {
+    startBtn.style.display = "none";
     video.play();
+
+    video.addEventListener("ended", () => {
+      loadingScreen.style.display = "none";
+      formSection.style.display = "flex";
+    });
   });
 });
 
