@@ -137,3 +137,28 @@ body, html {
 #surprise-section p {
   font-size: 20px;
 }
+
+#game-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--dark-navy), var(--black));
+  color: var(--white);
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.color-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+}
