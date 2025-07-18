@@ -162,3 +162,16 @@ body, html {
   border: 2px solid white;
   cursor: pointer;
 }
+
+#start-btn {
+  position: absolute;
+  bottom: 50px;
+  padding: 12px 20px;
+  background-color: var(--blue-grey);
+  color: var(--white);
+  border: none;
+  font-size: 18px;
+  border-radius: 6px;
+  z-index: 1001;
+  cursor: pointer;
+}
