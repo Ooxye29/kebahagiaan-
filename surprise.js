@@ -19,5 +19,5 @@ if (
   const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
   const nextBirthday = days < 0 ? 365 + days : days;
 
-  countdown.innerText = `Ulang tahunmu dalam ${nextBirthday} hari. Sampai hari itu tiba, kamu belum bisa lanjut ke kejutan selanjutnya!`;
+  countdown.innerText = `Ulang tahunmu dalam ${nextBirthday} hari. Tunggu ya! 🎁`;
 }
