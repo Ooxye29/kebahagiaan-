@@ -1,3 +1,32 @@
+:root {
+  --dark-navy: #0F1B2B;
+  --blue-grey: #3C4B5C;
+  --light-grey: #D3D3D3;
+  --white: #FFFFFF;
+  --black: #111111;
+}
+
+body {
+  background: linear-gradient(to bottom, var(--dark-navy), var(--black));
+  color: var(--white);
+}
+
+input, button {
+  background-color: var(--blue-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--light-grey);
+}
+
+button:hover {
+  background-color: var(--dark-navy);
+}
+
 body, html {
   margin: 0;
   padding: 0;
