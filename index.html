@@ -184,17 +184,7 @@
 
       localStorage.setItem("userName", name);
       localStorage.setItem("userBirth", birthdate);
-
-      // Uji dulu apakah game.html bisa diakses
-      fetch("game.html").then(response => {
-        if (response.ok) {
-          window.location.href = "game.html";
-        } else {
-          alert("File game.html belum tersedia. Cek kembali di Vercel atau GitHub!");
-        }
-      }).catch(() => {
-        alert("Terjadi error saat mencoba lanjut. Pastikan file game.html sudah di-upload.");
-      });
+      window.location.href = "game.html";
     });
   </script>
 </body>
