@@ -8,17 +8,20 @@
 </head>
 <body>
 
+  <!-- Force Landscape -->
   <div id="landscape-warning">
     <img src="assets/force-landscape.gif" alt="Landscape Only" />
   </div>
 
+  <!-- Loading Video -->
   <div id="loading-screen">
-    <video id="loading-video" autoplay muted>
+    <video id="loading-video" playsinline>
       <source src="assets/loading.mp4" type="video/mp4" />
     </video>
-    <button id="unmute-btn">Putar dengan Suara</button>
+    <button id="start-btn">Mulai</button>
   </div>
 
+  <!-- Input Form -->
   <div id="form-section">
     <form id="birthday-form">
       <input type="text" id="name" placeholder="Masukkan Nama Kamu" required />
