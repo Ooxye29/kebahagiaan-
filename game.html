@@ -2,32 +2,32 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Ulang Tahun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Warna</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div id="landscape-warning">
-    <img src="assets/force-landscape.gif" alt="Landscape Only" />
+  <div id="game-color">
+    <h2>Pilih Warna Favoritmu 🎨</h2>
+    <div class="color-grid">
+      <div class="color-box" data-color="merah" style="background-color: red;"></div>
+      <div class="color-box" data-color="biru" style="background-color: blue;"></div>
+      <div class="color-box" data-color="kuning" style="background-color: yellow;"></div>
+      <div class="color-box" data-color="hijau" style="background-color: green;"></div>
+      <div class="color-box" data-color="pink" style="background-color: pink;"></div>
+    </div>
   </div>
 
-  <div id="loading-screen">
-    <video id="loading-video">
-      <source src="assets/loading.mp4" type="video/mp4" />
-    </video>
-    <button id="start-btn">Klik untuk Mulai</button>
-  </div>
+  <script>
+    document.querySelectorAll(".color-box").forEach(box => {
+      box.addEventListener("click", () => {
+        const color = box.dataset.color;
+        localStorage.setItem("favoriteColor", color);
+        window.location.href = "surprise.html";
+      });
+    });
+  </script>
 
-  <div id="form-section">
-    <form id="birthday-form">
-      <input type="text" id="name" placeholder="Masukkan Nama Kamu" required />
-      <label for="birthdate">Masukkan Tanggal Lahir Kamu:</label>
-      <input type="date" id="birthdate" required />
-      <button type="submit">Lanjut</button>
-    </form>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
