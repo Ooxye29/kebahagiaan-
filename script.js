@@ -16,13 +16,12 @@ window.addEventListener("load", () => {
     startBtn.style.display = "none";
     video.muted = false;
     video.play().then(() => {
-      // Wait for video to finish
       video.onended = () => {
         loadingScreen.style.display = "none";
         formSection.style.display = "flex";
       };
-    }).catch((err) => {
-      alert("Browser tidak mengizinkan video diputar dengan suara. Silakan klik ulang.");
+    }).catch(() => {
+      alert("Browser tidak mengizinkan video diputar otomatis. Klik ulang tombol 'Mulai'.");
       startBtn.style.display = "block";
     });
   });
@@ -32,10 +31,12 @@ document.getElementById("birthday-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value.trim();
   const birthdate = document.getElementById("birthdate").value;
+
   if (!name || !birthdate) {
     alert("Nama dan Tanggal Lahir wajib diisi!");
     return;
   }
+
   localStorage.setItem("userName", name);
   localStorage.setItem("userBirth", birthdate);
   window.location.href = "game.html";
